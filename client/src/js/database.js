@@ -31,6 +31,6 @@ const transact = getInDB.transaction('jate', 'readonly');
 const storejate = transact.objectStore('jate');
 const requestj = storejate.get(1)
 const res = await requestj
-return res
+return res?.value
 }
 initdb();
